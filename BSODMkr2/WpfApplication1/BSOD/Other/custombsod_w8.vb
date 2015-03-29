@@ -32,8 +32,6 @@ Public Class custombsod_w8
         Dim SubMainLeftPoint As Integer = SmileLeftPoint + 30
         lblSubMain.Location = New Point(SubMainLeftPoint, SubMainTopPoint)
 
-        'lblMain.Text = My.Resources.custombsod.ToString
-
         If CInt(rtechsettings.GetSetting("basiccolor")) = 0 Then
             Me.BackColor = Color.FromArgb(31, 103, 179) 'W8 BSOD Blue
         ElseIf CInt(rtechsettings.GetSetting("basiccolor")) = 1 Then
@@ -41,7 +39,6 @@ Public Class custombsod_w8
         Else
             Throw New NotImplementedException
         End If
-
 
         Me.Location = New Point(0, 0)
         Me.Height = System.Windows.SystemParameters.PrimaryScreenHeight
