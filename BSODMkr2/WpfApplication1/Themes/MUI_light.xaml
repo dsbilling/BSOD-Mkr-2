@@ -1,0 +1,109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Color x:Key="WindowBackgroundColor" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        #ffffff
+    </Color>
+    <SolidColorBrush x:Key="ButtonBackground" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonBackgroundPressed" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonBorderHover" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonBorderPressed" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonText" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonTextHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonTextPressed" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ButtonTextDisabled" SolidColorBrush.Color="#a1a1a1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridBackground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridForeground" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellBackground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundSelected" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellForeground" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellForegroundHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridCellForegroundSelected" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderBackground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundPressed" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundSelected" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderForeground" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundPressed" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundSelected" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridGridLines" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="DataGridDropSeparator" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="Hyperlink" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="HyperlinkHover" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="HyperlinkDisabled" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputBackground" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputBackgroundHover" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputBorderHover" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputText" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputTextHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="InputTextDisabled" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemBackgroundSelected" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemText" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemTextSelected" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemTextHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ItemTextDisabled" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="LinkButtonText" SolidColorBrush.Color="#717171" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="LinkButtonTextHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="LinkButtonTextPressed" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="LinkButtonTextDisabled" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="MenuText" SolidColorBrush.Color="#66000000" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="MenuTextHover" SolidColorBrush.Color="#bb000000" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="MenuTextSelected" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonBorder" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonBorderHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonBorderPressed" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonBorderDisabled" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonIconBackgroundPressed" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonIconForegroundPressed" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonText" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonTextHover" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonTextPressed" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ModernButtonTextDisabled" SolidColorBrush.Color="#a1a1a1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="PopupBackground" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ProgressBackground" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarBackground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundDragging" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbForeground" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbForegroundDragging" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="ScrollBarThumbForegroundHover" SolidColorBrush.Color="Transparent" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SeparatorBackground" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderSelectionBackground" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderSelectionBorder" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBackground" SolidColorBrush.Color="#ffffff" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBackgroundDragging" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBackgroundHover" SolidColorBrush.Color="#dddddd" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBackgroundDisabled" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBorderDragging" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBorderHover" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderThumbBorderDisabled" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderTrackBackground" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderTrackBorder" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderTick" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SliderTickDisabled" SolidColorBrush.Color="#cccccc" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SubMenuText" SolidColorBrush.Color="#99000000" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SubMenuTextHover" SolidColorBrush.Color="#66000000" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="SubMenuTextSelected" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="WindowBackground" SolidColorBrush.Color="{StaticResource WindowBackgroundColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="WindowBorder" SolidColorBrush.Color="{DynamicResource AccentColor}" Brush.Opacity=".5" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="WindowBorderActive" SolidColorBrush.Color="{DynamicResource AccentColor}" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <LinearGradientBrush x:Key="WindowHeaderGradient" LinearGradientBrush.StartPoint="0, 0" LinearGradientBrush.EndPoint="0, 1" Brush.Opacity=".1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <GradientStop GradientStop.Offset="0" GradientStop.Color="{DynamicResource AccentColor}" />
+        <GradientStop GradientStop.Offset=".3" GradientStop.Color="{DynamicResource AccentColor}" />
+        <GradientStop GradientStop.Offset="1" GradientStop.Color="Transparent" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="WindowText" SolidColorBrush.Color="#333333" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <SolidColorBrush x:Key="WindowTextReadOnly" SolidColorBrush.Color="#919191" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+    <Rectangle x:Key="WindowBackgroundContent" FrameworkElement.Height="96" Shape.Fill="{StaticResource WindowHeaderGradient}" FrameworkElement.VerticalAlignment="Top" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+</ResourceDictionary>
+ 
+
+ 

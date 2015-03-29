@@ -1,0 +1,3 @@
+﻿Class support
+
+End Class

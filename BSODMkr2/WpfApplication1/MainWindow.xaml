@@ -1,0 +1,35 @@
+﻿<mui:ModernWindow x:Class="BSODMkr2.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+  Title="BSOD Mkr 2.0" IsTitleVisible="True"
+  Height="450" Width="700"
+  MinWidth="700" MinHeight="450"
+  WindowStartupLocation="CenterScreen"
+  ContentSource="/Pages/main/introduction.xaml"
+  Icon="/Content/bsodmkr_icon_128.ico">
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="home">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="introduction" Source="/Pages/main/introduction.xaml" />
+                <mui:Link DisplayName="help and support" Source="/Pages/main/helpandsupport.xaml" />
+                <mui:Link DisplayName="settings" Source="/Pages/main/settings.xaml" />
+                <mui:Link DisplayName="about" Source="/Pages/main/about.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="basic">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Home" Source="/Pages/basic/basichome.xaml" />
+                <mui:Link DisplayName="settings" Source="/Pages/main/settings.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="advanced">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Home" Source="/Pages/advanced/advhome.xaml" />
+                <mui:Link DisplayName="settings" Source="/Pages/main/settings.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>
+    
+    
