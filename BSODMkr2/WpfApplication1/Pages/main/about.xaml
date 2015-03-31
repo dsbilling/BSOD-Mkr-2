@@ -20,7 +20,7 @@
             <Grid MaxHeight="64" VerticalAlignment="Top">
                 <Image Source="/Content/bsodmkr_icon_128.ico" MaxHeight="64" MaxWidth="64" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" />
                 <StackPanel MinWidth="200" Grid.Column="2" Margin="75,0,0,0">
-                    <TextBlock Text="BSOD Mkr 2.0" Style="{StaticResource Heading2}" />
+                    <TextBlock Text="BSOD Mkr" Style="{StaticResource Heading2}" />
                     <TextBlock Text="0.0.0 Build 0000" Name="lblAboutVersion"/>
                     <TextBlock Text="© 2009-2015, Retarded Tech" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" FontSize="11" Margin="0,5,0,0"/>
                     <TextBlock Text=""/>

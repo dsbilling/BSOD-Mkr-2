@@ -60,6 +60,7 @@ Class basichome
         If isElevated = False Then
             cbKeyboardBlocker.SelectedIndex = 1
             cbKeyboardBlocker.IsEnabled = False
+            lblStatus.BBCode = "Ready. Not as admin."
         End If
 
 
