@@ -21,11 +21,11 @@
                 <StackPanel MinWidth="200">
                     <CheckBox x:Name="cbStartup" x:FieldModifier="public" Content="Check for updates on startup" />
                     <mui:BBCodeBlock BBCode=""/>
-                    <StackPanel Orientation="Horizontal">
-                        <CheckBox x:Name="cbTextMode" x:FieldModifier="public" Content="BSOD Text Mode" />
+                    <!--<StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="cbTextMode" x:FieldModifier="public" Content="BSOD Text Mode (Basic only)" />
                         <mui:BBCodeBlock BBCode="[url=http://docs.rtrdt.ch/display/BM/Settings]?[/url]" Margin="5,0,0,0" />
                     </StackPanel>
-                    <mui:BBCodeBlock BBCode=""/>
+                    <mui:BBCodeBlock BBCode=""/>-->
                     <CheckBox x:Name="cbAutoRestartAfterBSOD" x:FieldModifier="public" Content="Auto restart application when time is done (Recommended)" />
                     <mui:BBCodeBlock BBCode=""/>
                     <CheckBox x:Name="cbDebug" x:FieldModifier="public" Content="Debug" Visibility="Hidden" Margin="0,5,0,0" />

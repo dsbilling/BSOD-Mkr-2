@@ -55,6 +55,13 @@ Class basichome
         cbKeyboardBlocker.SelectedIndex = 0
         cbColor.SelectedIndex = 0
 
+        If My.Computer.Info.OSFullName.Contains("8") Then
+            cbType.SelectedIndex = 1
+        Else
+            cbType.SelectedIndex = 0
+        End If
+
+
         LoadSettings()
 
         If isElevated = False Then
@@ -69,59 +76,28 @@ Class basichome
         Try
             SaveSettings()
 
-            If CBool(rtechsettings.GetSetting("textmode")) = True Then
+            rtechlog.logThis("INFO", "Starting to make BSOD in basic mode.")
 
-                rtechlog.logThis("INFO", "Starting to make BSOD in text mode.")
+            If cbKeyboardBlocker.SelectedIndex = 0 Then
+                Dim kb As New keyboardblocker
+                kb.Show()
+            End If
 
-                pbLoading.Visibility = Windows.Visibility.Hidden
-                pbDownload.Visibility = Windows.Visibility.Hidden
+            Dim ctime As New timer
+            ctime.Show()
 
-                lblTimeLeftText.Visibility = Windows.Visibility.Hidden
-                lblTimeLeft.Visibility = Windows.Visibility.Hidden
-                lblFileSizeText.Visibility = Windows.Visibility.Hidden
-                lblFileSize.Visibility = Windows.Visibility.Hidden
-                lblSpeedText.Visibility = Windows.Visibility.Hidden
-                lblSpeed.Visibility = Windows.Visibility.Hidden
+            Dim cscreens As New coverscreens
+            cscreens.Show()
 
-                lblElapsedTimeText.Visibility = Windows.Visibility.Hidden
-                lblElapsedTime.Visibility = Windows.Visibility.Hidden
-
-                pbDownload.Value = 0
-
-                'MBox.ShowInfoOKBox("TEXT MODE")
-
-                If cbKeyboardBlocker.SelectedIndex = 0 Then
-                    Dim kb As New keyboardblocker
-                    kb.Show()
-                End If
-                Dim ctime As New timer
-                ctime.Show()
-                Dim cscreens As New coverscreens
-                cscreens.Show()
+            If cbType.SelectedIndex = 0 Then
+                Dim cbsod As New custombsod_w7
+                cbsod.Show()
+            Else
                 Dim cbsod As New custombsod_w8
                 cbsod.Show()
-
-                rtechlog.logThis("INFO", "BSOD is showing.")
-
-            Else
-                Throw New NotImplementedException
-                pbLoading.Visibility = Windows.Visibility.Visible
-                pbDownload.Visibility = Windows.Visibility.Visible
-
-                lblTimeLeftText.Visibility = Windows.Visibility.Visible
-                lblTimeLeft.Visibility = Windows.Visibility.Visible
-                lblFileSizeText.Visibility = Windows.Visibility.Visible
-                lblFileSize.Visibility = Windows.Visibility.Visible
-                lblSpeedText.Visibility = Windows.Visibility.Visible
-                lblSpeed.Visibility = Windows.Visibility.Visible
-
-                lblElapsedTimeText.Visibility = Windows.Visibility.Visible
-                lblElapsedTime.Visibility = Windows.Visibility.Visible
-
-                pbDownload.Value = 0
-
-                MBox.ShowInfoOKBox("IMAGE MODE")
             End If
+
+            rtechlog.logThis("INFO", "BSOD is showing.")
         Catch ex As Exception
             rtecherror.reportError(ex.Message(), ex.StackTrace())
         End Try

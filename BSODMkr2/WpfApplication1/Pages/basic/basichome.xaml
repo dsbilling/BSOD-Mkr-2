@@ -18,6 +18,14 @@
             <Rectangle />
 
             <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
+                <mui:BBCodeBlock BBCode="[b]Type:[/b]"/>
+                <ComboBox Name="cbType" >
+                    <ListBoxItem Content="Windows XP - 7"/>
+                    <ListBoxItem Content="Windows 8 - 8.1"/>
+                </ComboBox>
+
+                <mui:BBCodeBlock BBCode=""/>
+
                 <mui:BBCodeBlock BBCode="[b]Color:[/b]"/>
                 <ComboBox Name="cbColor" >
                     <ListBoxItem Content="Blue"/>
@@ -48,31 +56,6 @@
                 <mui:BBCodeBlock BBCode=""/>
 
                 <Button Name="btnGo" Content="Make The BSOD" />
-            </StackPanel>
-
-            <StackPanel MinWidth="350" Margin="225,0,0,0">
-                <StackPanel Orientation="Horizontal">
-                    <mui:BBCodeBlock BBCode="[b]Status:[/b]" Name="lblStatusText" Visibility="Hidden" />
-                    <mui:BBCodeBlock BBCode="N/A" Name="lblStatus" Visibility="Hidden" Margin="5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                    <mui:BBCodeBlock BBCode="[b]File Size:[/b]" Name="lblFileSizeText" Visibility="Hidden" />
-                    <mui:BBCodeBlock BBCode="N/A" Name="lblFileSize" Visibility="Hidden" Margin="5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                    <mui:BBCodeBlock BBCode="[b]Download Speed:[/b]" Name="lblSpeedText" Visibility="Hidden" />
-                    <mui:BBCodeBlock BBCode="N/A" Name="lblSpeed" Visibility="Hidden" Margin="5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                    <mui:BBCodeBlock BBCode="[b]Time Left:[/b]" Name="lblTimeLeftText" Visibility="Hidden" />
-                    <mui:BBCodeBlock BBCode="N/A" Name="lblTimeLeft" Visibility="Hidden" Margin="5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                    <mui:BBCodeBlock BBCode="[b]Elapsed Time:[/b]" Name="lblElapsedTimeText" Visibility="Hidden" />
-                    <mui:BBCodeBlock BBCode="N/A" Name="lblElapsedTime" Visibility="Hidden" Margin="5,0,0,0" />
-                </StackPanel>
-                <ProgressBar Name="pbLoading" Visibility="Hidden" Minimum="0" Maximum="1" Height="16" IsIndeterminate="True" Margin="0,10,0,0" Foreground="White" />
-                <ProgressBar Name="pbDownload" Visibility="Hidden" Minimum="0" Maximum="100" Value="70" Height="16" IsIndeterminate="False" Foreground="#FF1BA100" />
             </StackPanel>
 
             <!-- optional header -->
