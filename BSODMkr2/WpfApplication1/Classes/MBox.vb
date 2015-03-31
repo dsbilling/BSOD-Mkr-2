@@ -3,11 +3,13 @@
 Public Class MBox
     Public Shared Sub ShowErrorBox(exMessage As String, exStacktrace As String)
 
+        rtechlog.logThis("ERROR", "Error Message: " & exMessage)
+        rtechlog.logThis("ERROR", "Error Stacktrace: " & exStacktrace)
+
         Dim message As String = "[b]Error Message:[/b]" & vbNewLine & "[color=orange]" & exMessage & "[/color]" & vbNewLine & vbNewLine _
                                 & "[b]Error Details:[/b]" & vbNewLine & "[color=red]" & exStacktrace & "[/color]" & vbNewLine & vbNewLine _
                                 & vbNewLine & "All errors like this should be reported to us. Do you want to copy this error to the clipboard and open the browser to report this error? Please paste this in the description field."
 
-        'INFO
         Dim OSBit As String
         If Environment.Is64BitOperatingSystem = True Then
             OSBit = " 64-Bit"
@@ -30,6 +32,10 @@ Public Class MBox
     End Sub
     Public Shared Sub ShowKnownErrorBox(errorID As Integer, exMessage As String, exStacktrace As String)
 
+        rtechlog.logThis("ERROR", "Error ID: " & errorID)
+        rtechlog.logThis("ERROR", "Error Message: " & exMessage)
+        rtechlog.logThis("ERROR", "Error Details: " & exStacktrace)
+
         Dim message As String = "[b]Error ID:[/b]" & vbNewLine & errorID & vbNewLine & vbNewLine _
                                 & "[b]Error Message:[/b]" & vbNewLine & "[color=orange]" & exMessage & "[/color]" & vbNewLine & vbNewLine _
                                 & "[b]Error Details:[/b]" & vbNewLine & "[color=red]" & exStacktrace & " See documentation for more info.[/color]" & vbNewLine & vbNewLine _
@@ -44,6 +50,8 @@ Public Class MBox
     End Sub
     Public Shared Sub ShowInfoOKBox(msg As String)
 
+        rtechlog.logThis("INFO", "Message: " & msg)
+
         Dim result = ModernDialog.ShowMessage(msg, "Info", MessageBoxButton.OK)
 
         If result = MessageBoxResult.OK Then
@@ -52,6 +60,8 @@ Public Class MBox
 
     End Sub
     Public Shared Sub ShowWarningOKBox(msg As String)
+
+        rtechlog.logThis("WARNING", "Warning: " & msg)
 
         Dim result = ModernDialog.ShowMessage(msg, "Warning", MessageBoxButton.OK)
 

@@ -6,6 +6,7 @@
             End If
             If System.IO.File.Exists(rtechapp.settingsFilePath) = False Then
                 System.IO.File.WriteAllText(rtechapp.settingsFilePath, rtechapp.defaultSettings)
+                rtechlog.logThis("INFO", "Creating settings file.")
             End If
         Catch ex As Exception
             rtecherror.reportError(ex.Message, ex.StackTrace)
@@ -46,6 +47,9 @@
             Next
 
             System.IO.File.WriteAllLines(rtechapp.settingsFilePath, save_lines.ToArray())
+
+            rtechlog.logThis("INFO", "Saving """ & Name & """ setting file.")
+
         Catch ex As Exception
             rtecherror.reportError(ex.Message, ex.StackTrace)
         End Try

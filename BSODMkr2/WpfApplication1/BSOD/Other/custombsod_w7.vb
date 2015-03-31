@@ -3,6 +3,8 @@
 Public Class custombsod_w7
     Private Sub custombsod_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
+        rtechlog.logThis("INFO", "CustomW7TextBSOD is loaded.")
+
         'Dim CalcFontSizeA As Integer = Math.Min(232, CType(Math.Round(Me.custombsodtext.Height * 0.09, 0), Integer))
         'Dim CalcFontSizeB As Integer = Math.Min(232, CType(Math.Round(Me.custombsodtext.Width * 0.05, 0), Integer))
         'Dim FinalFontSize As Integer = Math.Min(CalcFontSizeA, CalcFontSizeB)
@@ -24,5 +26,10 @@ Public Class custombsod_w7
         Me.Location = New Point(0, 0)
         Me.Height = System.Windows.SystemParameters.PrimaryScreenHeight
         Me.Width = System.Windows.SystemParameters.PrimaryScreenWidth
+    End Sub
+    Private Sub custombsod_w7_FormClosing(sender As System.Object, e As System.EventArgs) Handles MyBase.FormClosing
+
+        rtechlog.logThis("INFO", "CustomW7TextBSOD is closing.")
+
     End Sub
 End Class

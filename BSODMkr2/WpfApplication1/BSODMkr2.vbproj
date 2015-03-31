@@ -129,6 +129,7 @@
     <Compile Include="Classes\MBox.vb" />
     <Compile Include="Classes\rtechapp.vb" />
     <Compile Include="Classes\rtecherror.vb" />
+    <Compile Include="Classes\rtechlog.vb" />
     <Compile Include="Classes\rtechsettings.vb" />
     <Compile Include="Classes\StringExtensions.vb" />
     <Compile Include="Pages\advanced\advhome.xaml.vb">

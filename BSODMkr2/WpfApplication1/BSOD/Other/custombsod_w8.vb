@@ -4,9 +4,7 @@ Imports System.Windows.Forms
 Public Class custombsod_w8
     Private Sub custombsod_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
-        'Dim CalcFontSizeA As Integer = Math.Min(232, CType(Math.Round(Me.custombsodtext.Height * 0.09, 0), Integer))
-        'Dim CalcFontSizeB As Integer = Math.Min(232, CType(Math.Round(Me.custombsodtext.Width * 0.05, 0), Integer))
-        'Dim FinalFontSize As Integer = Math.Min(CalcFontSizeA, CalcFontSizeB)
+        rtechlog.logThis("INFO", "CustomW8TextBSOD is loaded.")
 
         Dim SmileFinalFontSize As Integer = System.Windows.SystemParameters.PrimaryScreenWidth / System.Windows.SystemParameters.PrimaryScreenHeight * 85
         lblSmile.Font = New Font(lblSmile.Font.Name, SmileFinalFontSize, lblSmile.Font.Style)
@@ -43,6 +41,12 @@ Public Class custombsod_w8
         Me.Location = New Point(0, 0)
         Me.Height = System.Windows.SystemParameters.PrimaryScreenHeight
         Me.Width = System.Windows.SystemParameters.PrimaryScreenWidth
+
+    End Sub
+
+    Private Sub custombsod_w8_FormClosing(sender As System.Object, e As System.EventArgs) Handles MyBase.FormClosing
+
+        rtechlog.logThis("INFO", "CustomW8TextBSOD is closing.")
 
     End Sub
 End Class

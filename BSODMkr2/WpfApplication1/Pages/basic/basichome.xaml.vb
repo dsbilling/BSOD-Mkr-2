@@ -69,6 +69,9 @@ Class basichome
             SaveSettings()
 
             If CBool(rtechsettings.GetSetting("textmode")) = True Then
+
+                rtechlog.logThis("INFO", "Starting to make BSOD in text mode.")
+
                 pbLoading.Visibility = Windows.Visibility.Hidden
                 pbDownload.Visibility = Windows.Visibility.Hidden
 
@@ -96,6 +99,8 @@ Class basichome
                 cscreens.Show()
                 Dim cbsod As New custombsod_w8
                 cbsod.Show()
+
+                rtechlog.logThis("INFO", "BSOD is showing.")
 
             Else
                 Throw New NotImplementedException

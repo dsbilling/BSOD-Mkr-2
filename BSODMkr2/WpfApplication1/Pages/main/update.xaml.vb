@@ -41,9 +41,11 @@ Class update
 
                 If newestversion <= currentversion Then
                     lblInfo.BBCode = vbNewLine & "[b]You have the newest version![/b]"
+                    rtechlog.logThis("INFO", "Application is up-to-date.")
                 ElseIf newestversion > currentversion Then
                     lblInfo.BBCode = vbNewLine & "[color=orange][b]Old version detected.[/b][/color] [url=http://docs.rtrdt.ch/display/BM/Release+Notes]What's new?[/url]" & vbNewLine & vbNewLine _
                                    & "[b]Current:[/b] " & currentversion & vbNewLine & "[b]Newest:[/b] " & newestversion & " (" & serverdate & ")"
+                    rtechlog.logThis("INFO", "Update for application has been found. New: " & newestversion & " (" & serverdate & ") -  Old: " & currentversion)
                 End If
 
             End If
@@ -63,6 +65,7 @@ Class update
         lblStatusText.Visibility = Windows.Visibility.Visible
         lblStatus.Visibility = Windows.Visibility.Visible
         lblStatus.BBCode = "Connecting..."
+        rtechlog.logThis("INFO", "Update: Connecting to server for download...")
 
         lblTimeLeftText.Visibility = Windows.Visibility.Visible
         lblTimeLeft.Visibility = Windows.Visibility.Visible
@@ -78,7 +81,7 @@ Class update
         sw.Reset() 'Reset elapsed time
         lblElapsedTime.BBCode = "N/A"
 
-
+        rtechlog.logThis("INFO", "Update: Checking files and folders.")
         Try
             If System.IO.Directory.Exists(rtechapp.filesFolderPath) = False Then
                 System.IO.Directory.CreateDirectory(rtechapp.filesFolderPath)
@@ -94,6 +97,8 @@ Class update
         Catch ex As Exception
             rtecherror.reportError(ex.Message, ex.ToString)
         End Try
+
+        rtechlog.logThis("INFO", "Update: Getting info from server.")
 
         Try
             Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.no/products/bsodmkr/version.txt")
@@ -120,15 +125,17 @@ Class update
 
     Private Sub downloadUpdate(serverlink As String)
         Try
+            rtechlog.logThis("INFO", "Update: Creating temp folder.")
             If System.IO.Directory.Exists(rtechapp.tempFilePath) = False Then
                 System.IO.Directory.CreateDirectory(rtechapp.tempFilePath)
             End If
-
+            rtechlog.logThis("INFO", "Update: Deleting old files.")
             If IO.File.Exists(rtechapp.tempFilePath & "newversion.zip") Then
                 IO.File.Delete(rtechapp.tempFilePath & "newversion.zip")
             End If
 
             lblStatus.BBCode = "Collecting info..."
+            rtechlog.logThis("INFO", "Update: Starting download.")
 
             sw.Start() ' start stopwatch just before sending request
 
@@ -145,17 +152,20 @@ Class update
         If Not e.Cancelled AndAlso e.Error Is Nothing Then
             lblStatus.BBCode = "Download done!"
             lblTimeLeft.BBCode = "Done."
+            rtechlog.logThis("INFO", "Update: Download done.")
             'lblElapsedTime.BBCode = sw.Elapsed.Seconds & " seconds"
 
             unzipUpdate()
 
         ElseIf e.Cancelled Then
             lblStatus.BBCode = "Download cancelled!"
+            rtechlog.logThis("INFO", "Update: Download cancelled!")
 
             pbDownload.Foreground = New SolidColorBrush(Windows.Media.Color.FromRgb(255, 165, 0))
             pbLoading.Foreground = New SolidColorBrush(Windows.Media.Color.FromRgb(255, 165, 0))
         Else
             lblStatus.BBCode = "Download failed!"
+            rtechlog.logThis("INFO", "Update: Download failed!")
 
             pbDownload.Value = 100
             pbDownload.Foreground = New SolidColorBrush(Windows.Media.Color.FromRgb(255, 0, 0))
@@ -243,6 +253,7 @@ Class update
     Private Sub unzipUpdate()
 
         lblStatus.Text = "Starting updater..."
+        rtechlog.logThis("INFO", "Update: Starting updater...")
         pbDownload.Foreground = New SolidColorBrush(Windows.Media.Color.FromRgb(27, 161, 226))
 
         btnCancel.IsEnabled = False
@@ -271,6 +282,7 @@ Class update
                     IO.Directory.Delete(rtechapp.tempFilePath)
                 End If
                 lblStatus.BBCode = "Updater.exe not found!"
+                rtechlog.logThis("INFO", "Update: Updater.exe not found!")
                 pbDownload.Foreground = New SolidColorBrush(Windows.Media.Color.FromRgb(255, 0, 0))
 
                 MBox.ShowKnownErrorBox("0100", "Updater.exe not found!", "Can't locate updater.exe in the same folder as this software, can't continue updating.")
