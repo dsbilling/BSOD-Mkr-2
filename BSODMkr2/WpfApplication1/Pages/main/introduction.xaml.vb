@@ -1,14 +1,16 @@
 ﻿Public Class introduction
 
-    Private Sub introduction_Initialized(sender As Object, e As EventArgs) Handles MyBase.Initialized, MyBase.Initialized
+    Private Sub introduction_Initialized(sender As Object, e As EventArgs) Handles MyBase.Initialized
 
         'MsgBox(System.Reflection.Assembly.GetExecutingAssembly().Location)
 
         lblVersion.Text = rtechapp.longVersion
 
+        rtechlog.logThis("INFO", "Application has started up successfully.")
+
     End Sub
 
-    Private Sub introduction_Loaded(sender As Object, e As RoutedEventArgs) Handles MyBase.Loaded, MyBase.Loaded
+    Private Sub introduction_Loaded(sender As Object, e As RoutedEventArgs) Handles MyBase.Loaded
         Try
             If CBool(rtechsettings.GetSetting("updatestartup")) = True Then
                 lblStatus.Text = checkforupdate.C4UTextOutput()
