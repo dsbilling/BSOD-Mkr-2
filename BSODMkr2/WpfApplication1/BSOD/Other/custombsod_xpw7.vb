@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing
 
-Public Class custombsod_w7
+Public Class custombsod_xpw7
     Private Sub custombsod_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         rtechlog.logThis("INFO", "CustomW7TextBSOD is loaded.")

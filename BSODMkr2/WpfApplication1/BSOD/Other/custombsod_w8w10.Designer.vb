@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class custombsod_w8
+Partial Class custombsod_w8w10
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class custombsod_w8
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(custombsod_w8))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(custombsod_w8w10))
         Me.lblMain = New System.Windows.Forms.Label()
         Me.lblSmile = New System.Windows.Forms.Label()
         Me.lblSubMain = New System.Windows.Forms.Label()
@@ -57,10 +57,10 @@ Partial Class custombsod_w8
         Me.lblSubMain.ForeColor = System.Drawing.Color.White
         Me.lblSubMain.Location = New System.Drawing.Point(12, 64)
         Me.lblSubMain.Name = "lblSubMain"
-        Me.lblSubMain.Size = New System.Drawing.Size(479, 13)
+        Me.lblSubMain.Size = New System.Drawing.Size(553, 13)
         Me.lblSubMain.TabIndex = 2
         Me.lblSubMain.Text = "If you'd like to know more, you can search online later for this error: BSODMKR_R" & _
-    "UN_STATUS_FAILED"
+    "UN_STATUS_FAILED (bsodmkr2.exe)"
         '
         'custombsod_w8
         '

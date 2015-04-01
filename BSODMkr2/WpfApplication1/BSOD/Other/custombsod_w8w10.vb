@@ -1,7 +1,7 @@
 ﻿Imports System.Drawing
 Imports System.Windows.Forms
 
-Public Class custombsod_w8
+Public Class custombsod_w8w10
     Private Sub custombsod_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         rtechlog.logThis("INFO", "CustomW8TextBSOD is loaded.")
@@ -9,7 +9,7 @@ Public Class custombsod_w8
         Dim SmileFinalFontSize As Integer = System.Windows.SystemParameters.PrimaryScreenWidth / System.Windows.SystemParameters.PrimaryScreenHeight * 85
         lblSmile.Font = New Font(lblSmile.Font.Name, SmileFinalFontSize, lblSmile.Font.Style)
 
-        Dim SmileTopPoint As Integer = System.Windows.SystemParameters.PrimaryScreenHeight / 6
+        Dim SmileTopPoint As Integer = System.Windows.SystemParameters.PrimaryScreenHeight / 6 - 30
         Dim SmileLeftPoint As Integer = System.Windows.SystemParameters.PrimaryScreenWidth / 6 - 30
         lblSmile.Location = New Point(SmileLeftPoint, SmileTopPoint)
 
