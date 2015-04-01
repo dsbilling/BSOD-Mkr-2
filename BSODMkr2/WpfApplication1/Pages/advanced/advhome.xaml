@@ -19,15 +19,26 @@
 
             <ScrollViewer>
                 <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
+                    <mui:BBCodeBlock BBCode="[b]Type:[/b]"/>
+                    <ComboBox Name="cbAdvType" >
+                        <ListBoxItem Content="Windows XP - 7"/>
+                        <ListBoxItem Content="Windows 8 - 10"/>
+                    </ComboBox>
+
+                    <mui:BBCodeBlock BBCode=""/>
+
                     <mui:BBCodeBlock BBCode="[b]Color:[/b]"/>
-                    <ComboBox Name="cbColor" >
-                        <ListBoxItem Content="Blue"/>
+                    <ComboBox Name="cbAdvColor" >
+                        <ListBoxItem Content="Original BSOD Blue"/>
                         <ListBoxItem Content="Black"/>
                     </ComboBox>
 
                     <mui:BBCodeBlock BBCode=""/>
 
-                    <mui:BBCodeBlock BBCode="[b]Keyboard bocker:[/b]"/>
+                    <StackPanel Orientation="Horizontal">
+                        <mui:BBCodeBlock BBCode="[b]Keyboard bocker:[/b]"/>
+                        <mui:BBCodeBlock BBCode="[url=http://docs.rtrdt.ch/display/BM/Basic+Home]?[/url]" Margin="5,0,0,0" />
+                    </StackPanel>
                     <ComboBox Name="cbKeyboardBlocker" >
                         <ListBoxItem Content="Enabled"/>
                         <ListBoxItem Content="Disabled"/>
@@ -36,26 +47,32 @@
                     <mui:BBCodeBlock BBCode=""/>
 
                     <mui:BBCodeBlock BBCode="[b]Time in seconds:[/b]"/>
-                    <TextBox Name="tbTime" Text="30" />
+                    <TextBox Name="tbAdvTime" Text="30" />
 
                     <mui:BBCodeBlock BBCode=""/>
 
                     <mui:BBCodeBlock BBCode="[b]Resolution:[/b]"/>
-                    <mui:BBCodeBlock Name="lblResolution" BBCode="0000x0000"/>
+                    <mui:BBCodeBlock Name="lblResolution" BBCode="N/A"/>
 
                     <mui:BBCodeBlock BBCode=""/>
 
                     <Button Name="btnGo" Content="Make The BSOD" />
-
-
                 </StackPanel>
             </ScrollViewer>
 
-            <ScrollViewer Margin="225,0,0,0">
-                <StackPanel MinWidth="350" HorizontalAlignment="left">
-                    <ListBox Name="ListBox1"/>
+            <StackPanel MinWidth="350" Margin="225,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <mui:BBCodeBlock BBCode="[b]Status:[/b]" Name="lblStatusText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblStatus" Visibility="Hidden" Margin="5,0,0,0" />
                 </StackPanel>
-            </ScrollViewer>
+                <StackPanel Margin="0,10,0,0">
+                    <ScrollViewer MinWidth="350" HorizontalAlignment="left">
+                        <ListBox Name="ListBox1"/>
+                    </ScrollViewer>
+                </StackPanel>
+            </StackPanel>
+
+            
 
             <!-- optional header -->
             <Grid Margin="{StaticResource HeaderMargin}" HorizontalAlignment="Right" VerticalAlignment="Top">
