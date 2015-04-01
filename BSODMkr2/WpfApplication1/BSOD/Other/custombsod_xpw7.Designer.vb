@@ -37,7 +37,7 @@ Partial Class custombsod_xpw7
         Me.custombsodtext.TabIndex = 0
         Me.custombsodtext.Text = "THIS IS A CUSTOM BSOD!"
         '
-        'custombsod_w7
+        'custombsod_xpw7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -46,7 +46,7 @@ Partial Class custombsod_xpw7
         Me.Controls.Add(Me.custombsodtext)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "custombsod_w7"
+        Me.Name = "custombsod_xpw7"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "BSOD Mkr 2.0 - Custom BSOD"

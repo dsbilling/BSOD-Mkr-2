@@ -95,10 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BSOD\Other\custombsod_w8.Designer.vb">
-      <DependentUpon>custombsod_w8.vb</DependentUpon>
+    <Compile Include="BSOD\Other\custombsod_w8w10.Designer.vb">
+      <DependentUpon>custombsod_w8w10.vb</DependentUpon>
     </Compile>
-    <Compile Include="BSOD\Other\custombsod_w8.vb">
+    <Compile Include="BSOD\Other\custombsod_w8w10.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BSOD\Other\keyboardblocker.Designer.vb">
@@ -119,10 +119,10 @@
     <Compile Include="BSOD\Other\coverscreens.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BSOD\Other\custombsod_w7.Designer.vb">
-      <DependentUpon>custombsod_w7.vb</DependentUpon>
+    <Compile Include="BSOD\Other\custombsod_xpw7.Designer.vb">
+      <DependentUpon>custombsod_xpw7.vb</DependentUpon>
     </Compile>
-    <Compile Include="BSOD\Other\custombsod_w7.vb">
+    <Compile Include="BSOD\Other\custombsod_xpw7.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\checkforupdate.vb" />
@@ -247,8 +247,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="BSOD\Other\custombsod_w8.resx">
-      <DependentUpon>custombsod_w8.vb</DependentUpon>
+    <EmbeddedResource Include="BSOD\Other\custombsod_w8w10.resx">
+      <DependentUpon>custombsod_w8w10.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BSOD\Other\keyboardblocker.resx">
       <DependentUpon>keyboardblocker.vb</DependentUpon>
@@ -259,8 +259,8 @@
     <EmbeddedResource Include="BSOD\Other\coverscreens.resx">
       <DependentUpon>coverscreens.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BSOD\Other\custombsod_w7.resx">
-      <DependentUpon>custombsod_w7.vb</DependentUpon>
+    <EmbeddedResource Include="BSOD\Other\custombsod_xpw7.resx">
+      <DependentUpon>custombsod_xpw7.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -313,6 +313,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\custombsod_2000.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\custombsod_ce.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\custombsod_w8_earlybuild.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\custombsod_vista_earlybuild.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

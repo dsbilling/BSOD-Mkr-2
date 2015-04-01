@@ -62,7 +62,7 @@ Partial Class custombsod_w8w10
         Me.lblSubMain.Text = "If you'd like to know more, you can search online later for this error: BSODMKR_R" & _
     "UN_STATUS_FAILED (bsodmkr2.exe)"
         '
-        'custombsod_w8
+        'custombsod_w8w10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -74,7 +74,7 @@ Partial Class custombsod_w8w10
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "custombsod_w8"
+        Me.Name = "custombsod_w8w10"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "BSOD Mkr 2.0 - Custom BSOD"
