@@ -4,8 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      mc:Ignorable="d"
       Title="settings" Initialized="Page_Initialized">
     <Grid>
         <Rectangle Grid.RowSpan="2" />
@@ -27,13 +26,14 @@
                     </StackPanel>
                     <mui:BBCodeBlock BBCode=""/>-->
                     <CheckBox x:Name="cbAutoRestartAfterBSOD" x:FieldModifier="public" Content="Auto restart application when time is done (Recommended)" />
+                    <Button Content="Open Appdata Folder" Margin="0,50,8,0" Width="175" HorizontalAlignment="Left" Name="btnAppdataFolder" />
                     <mui:BBCodeBlock BBCode=""/>
                     <CheckBox x:Name="cbDebug" x:FieldModifier="public" Content="Debug" Visibility="Hidden" Margin="0,5,0,0" />
                 </StackPanel>
             </ScrollViewer>
-            <ScrollViewer VerticalContentAlignment="Center" VerticalAlignment="Bottom">
-                <StackPanel MinWidth="200">
-                    <Button Width="100" Content="Save" Name="btnSave" VerticalContentAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
+            <ScrollViewer VerticalAlignment="Bottom" HorizontalContentAlignment="Right">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Save" Width="100" Name="btnSave" />
                 </StackPanel>
             </ScrollViewer>
 

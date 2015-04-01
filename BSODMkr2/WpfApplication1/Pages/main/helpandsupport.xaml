@@ -20,10 +20,10 @@
             <ScrollViewer>
                 <StackPanel MinWidth="200">
                     <TextBlock Text="Help" Style="{StaticResource Heading2}" />
-                    <mui:BBCodeBlock BBCode="If you are strugeling to use BSOD Mkr you can check out our [url=http://docs.rtrdt.ch/display/BM/BSOD+Mkr]documentation[/url] and see if you find a solution to your probloem. You could also check our [url=http://support.retardedtech.no/index.php?/Knowledgebase/List]knowledgebase[/url] and see if there is anything there too. And if these can't help you; you should send us a support ticket." />
+                    <mui:BBCodeBlock BBCode="If you are strugeling to use BSOD Mkr you can check out our [url=http://docs.rtrdt.ch/display/BM/BSOD+Mkr]documentation[/url] and see if you find a solution to your problem. You could also check our [url=https://my.rtrdt.ch/knowledgebase.php]knowledgebase[/url] and see if there is anything there too. And if these can't help you; you should send us a support ticket." />
                     <mui:BBCodeBlock BBCode="" />
                     <TextBlock Text="Support" Style="{StaticResource Heading2}" />
-                    <mui:BBCodeBlock BBCode="You can easily get support from us via email or web for [b][u]free![/u][/b] &#13;&#10;&#13;&#10;Head over to [url=https://my.rtrdt.ch/submitticket.php]https://my.rtrdt.ch/submitticket.php[/url] to submit a ticket. Or send us an email to [url=mailto:support@retardedtech.no]support@retardedtech.no[/url]" />
+                    <mui:BBCodeBlock BBCode="You can easily get support from us via email or web for [b][u]free![/u][/b] &#13;&#10;&#13;&#10;Head over to [url=https://my.rtrdt.ch/submitticket.php]my.rtrdt.ch[/url] to submit a ticket. Or send us an email to [url=mailto:support@retardedtech.no]support@retardedtech.no[/url]" />
                 </StackPanel>
             </ScrollViewer>
 

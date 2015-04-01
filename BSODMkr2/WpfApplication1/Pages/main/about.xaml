@@ -28,18 +28,18 @@
             </Grid>
 
             <Grid Margin="0,75,0,0">
-                <StackPanel>
+                <StackPanel CanVerticallyScroll="True">
                     <mui:BBCodeBlock BBCode="This application is licensed under [url=http://www.retardedtech.com/licenses]RTFL v1[/url]."/>
                     <mui:BBCodeBlock BBCode=""/>
                     <!-- CommandTarget="{Binding ElementName=Frame}" -->
                     <Button Content="Check for updates" Width="150" Name="btnC4U" HorizontalAlignment="Left" Margin="0,0,0,20" Command="NavigationCommands.GoToPage" CommandParameter="/Pages/Main/update.xaml" />
                     <TextBlock Text="Links" Style="{StaticResource Heading2}" />
-                    <mui:BBCodeBlock BBCode="[url=http://bsodmkr.com/]Homepage[/url]"/>
+                    <mui:BBCodeBlock BBCode="[url=http://bsodmkr.com/]Website[/url]"/>
                     <mui:BBCodeBlock BBCode="[url=http://docs.rtrdt.ch/display/BM/Release+Notes]Changelog[/url]"/>
-                    <mui:BBCodeBlock BBCode="[url=http://jira.rtrdt.ch/browse/BM]Issues &amp; Bugs[/url]"/>
+                    <mui:BBCodeBlock BBCode="[url=http://jira.rtrdt.ch/browse/BM]Issues and Bugs[/url]"/>
                     <mui:BBCodeBlock BBCode=""/>
-                    <Button Content="Throw New Unknown Exeption" Margin="0,0,0,8" Name="btnExeption"/>
-                    <Button Content="Throw New Known Exeption" Margin="0,0,0,8" Name="btnKnownExeption"/>
+                    <Button Content="DEBUG: Throw New Unknown Exeption" Margin="0,0,0,8" Name="btnExeption"/>
+                    <Button Content="DEBUG: Throw New Known Exeption" Margin="0,0,0,8" Name="btnKnownExeption"/>
                 </StackPanel>
             </Grid>
 

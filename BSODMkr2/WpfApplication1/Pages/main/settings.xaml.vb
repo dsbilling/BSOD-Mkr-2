@@ -37,4 +37,8 @@
     Private Sub Page_Initialized(sender As Object, e As EventArgs)
         LoadSettings()
     End Sub
+
+    Private Sub btnAppdataFolder_Click(sender As Object, e As RoutedEventArgs) Handles btnAppdataFolder.Click
+        Process.Start(rtechapp.filesFolderPath)
+    End Sub
 End Class
