@@ -49,4 +49,9 @@ Public Class custombsod_w8w10
         rtechlog.logThis("INFO", "CustomW8TextBSOD is closing.")
 
     End Sub
+
+    Private Sub custombsod_w8w10_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDoubleClick
+        rtechlog.logThis("INFO", "User closed CustomW8TextBSOD manually.")
+        Me.Close()
+    End Sub
 End Class

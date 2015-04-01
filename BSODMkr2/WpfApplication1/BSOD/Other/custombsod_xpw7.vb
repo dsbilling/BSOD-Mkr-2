@@ -32,4 +32,9 @@ Public Class custombsod_xpw7
         rtechlog.logThis("INFO", "CustomW7TextBSOD is closing.")
 
     End Sub
+
+    Private Sub custombsod_xpw7_MouseDoubleClick(sender As Object, e As Forms.MouseEventArgs) Handles MyBase.MouseDoubleClick
+        rtechlog.logThis("INFO", "User closed CustomW7TextBSOD manually.")
+        Me.Close()
+    End Sub
 End Class
