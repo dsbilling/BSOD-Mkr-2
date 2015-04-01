@@ -55,12 +55,11 @@ Class basichome
         cbKeyboardBlocker.SelectedIndex = 0
         cbColor.SelectedIndex = 0
 
-        If My.Computer.Info.OSFullName.Contains("8") Then
-            cbType.SelectedIndex = 1
+        If My.Computer.Info.OSFullName.Contains("8") Or My.Computer.Info.OSFullName.Contains("10") Then
+            cbBasicStyle.SelectedIndex = 1
         Else
-            cbType.SelectedIndex = 0
+            cbBasicStyle.SelectedIndex = 0
         End If
-
 
         LoadSettings()
 
@@ -69,7 +68,6 @@ Class basichome
             cbKeyboardBlocker.IsEnabled = False
             lblStatus.BBCode = "Ready. Not as admin."
         End If
-
 
     End Sub
     Private Sub MakeBSOD()
@@ -89,11 +87,11 @@ Class basichome
             Dim cscreens As New coverscreens
             cscreens.Show()
 
-            If cbType.SelectedIndex = 0 Then
-                Dim cbsod As New custombsod_w7
+            If cbBasicStyle.SelectedIndex = 0 Then
+                Dim cbsod As New custombsod_xpw7
                 cbsod.Show()
             Else
-                Dim cbsod As New custombsod_w8
+                Dim cbsod As New custombsod_w8w10
                 cbsod.Show()
             End If
 

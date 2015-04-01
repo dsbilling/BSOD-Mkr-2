@@ -8,7 +8,6 @@
         Try
             Me.cbDebug.IsChecked = CBool(rtechsettings.GetSetting("debug"))
             Me.cbStartup.IsChecked = CBool(rtechsettings.GetSetting("updatestartup"))
-            Me.cbTextMode.IsChecked = CBool(rtechsettings.GetSetting("textmode"))
             Me.cbAutoRestartAfterBSOD.IsChecked = CBool(rtechsettings.GetSetting("autorestartafterbsod"))
             If Me.cbDebug.IsChecked Then
                 Me.cbDebug.Visibility = Windows.Visibility.Visible
@@ -24,7 +23,6 @@
         Try
             rtechsettings.SaveSetting("debug", Convert.ToInt16(Convert.ToBoolean(cbDebug.IsChecked.ToString)))
             rtechsettings.SaveSetting("updatestartup", Convert.ToInt16(Convert.ToBoolean(cbStartup.IsChecked.ToString)))
-            rtechsettings.SaveSetting("textmode", Convert.ToInt16(Convert.ToBoolean(cbTextMode.IsChecked.ToString)))
             rtechsettings.SaveSetting("autorestartafterbsod", Convert.ToInt16(Convert.ToBoolean(cbAutoRestartAfterBSOD.IsChecked.ToString)))
         Catch ex As Exception
             rtecherror.reportError(ex.Message(), ex.StackTrace())

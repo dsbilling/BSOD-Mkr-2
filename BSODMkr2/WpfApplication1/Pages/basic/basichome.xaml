@@ -19,16 +19,16 @@
 
             <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
                 <mui:BBCodeBlock BBCode="[b]Type:[/b]"/>
-                <ComboBox Name="cbType" >
+                <ComboBox Name="cbBasicStyle" >
                     <ListBoxItem Content="Windows XP - 7"/>
-                    <ListBoxItem Content="Windows 8 - 8.1"/>
+                    <ListBoxItem Content="Windows 8 - 10"/>
                 </ComboBox>
 
                 <mui:BBCodeBlock BBCode=""/>
 
                 <mui:BBCodeBlock BBCode="[b]Color:[/b]"/>
                 <ComboBox Name="cbColor" >
-                    <ListBoxItem Content="Blue"/>
+                    <ListBoxItem Content="Original BSOD Blue"/>
                     <ListBoxItem Content="Black"/>
                 </ComboBox>
 
@@ -56,6 +56,13 @@
                 <mui:BBCodeBlock BBCode=""/>
 
                 <Button Name="btnGo" Content="Make The BSOD" />
+            </StackPanel>
+
+            <StackPanel MinWidth="350" Margin="225,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <mui:BBCodeBlock BBCode="[b]Status:[/b]" Name="lblStatusText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblStatus" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
             </StackPanel>
 
             <!-- optional header -->
