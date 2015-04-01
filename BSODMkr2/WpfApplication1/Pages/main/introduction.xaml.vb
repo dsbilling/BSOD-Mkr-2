@@ -6,7 +6,7 @@
 
         lblVersion.Text = rtechapp.longVersion
 
-        rtechlog.logThis("INFO", "Application has started up successfully.")
+        rtechlog.logThis("INFO", "Application has started up successfully from: " & Application.ResourceAssembly.Location)
 
     End Sub
 

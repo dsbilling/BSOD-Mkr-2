@@ -15,12 +15,21 @@
     Public Shared miniVersion As String = My.Application.Info.Version.Major.ToString & "." & My.Application.Info.Version.Minor.ToString
 
     Public Shared Sub ApplicationShutdown()
-        rtechlog.logThis("INFO", "Application is shutting down.")
-        Application.Current.Shutdown()
+        Try
+            rtechlog.logThis("INFO", "Application is shutting down.")
+            Application.Current.Shutdown()
+        Catch ex As Exception
+            rtecherror.reportError(ex.Message(), ex.StackTrace())
+        End Try
     End Sub
     Public Shared Sub ApplicationRestart()
-        rtechlog.logThis("INFO", "Application is restarting.")
-        Process.Start(Application.ResourceAssembly.Location)
-        Application.Current.Shutdown()
+        Try
+            rtechlog.logThis("INFO", "Application shutting down...")
+            Application.Current.Shutdown()
+            rtechlog.logThis("INFO", "Application is trying to restart: " & Application.ResourceAssembly.Location)
+            Process.Start(Application.ResourceAssembly.Location)
+        Catch ex As Exception
+            rtecherror.reportError(ex.Message(), ex.StackTrace())
+        End Try
     End Sub
 End Class
