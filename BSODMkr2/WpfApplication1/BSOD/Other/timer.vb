@@ -18,6 +18,7 @@
         secs = secs + 1
         lblTimer.Text = secs
         If secs = usersecs Then
+            tTimer.Stop()
             rtechlog.logThis("INFO", "Timer is done.")
             Cursor.Show()
             rtechlog.logThis("INFO", "Cursor is shown.")
@@ -25,8 +26,10 @@
             Call keybd_event(System.Windows.Forms.Keys.VolumeUp, 0, 0, 0) 'make sure the sound is turned back to original level
             rtechlog.logThis("INFO", "Sound is unmuted.")
             If CBool(rtechsettings.GetSetting("autorestartafterbsod")) = True Then
+
                 rtechapp.ApplicationRestart()
             End If
+
         End If
     End Sub
     Private Sub lblTimer_TextChanged(sender As Object, e As EventArgs) Handles lblTimer.TextChanged
