@@ -1,10 +1,7 @@
-﻿Imports System.Security.Principal
+﻿Imports System.Text.RegularExpressions
+Imports FirstFloor.ModernUI.Windows.Controls
 
 Class advhome
-
-    Private identity = WindowsIdentity.GetCurrent()
-    Private principal = New WindowsPrincipal(identity)
-    Private isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.Administrator)
 
     Private Sub lblResolution_Loaded(sender As Object, e As RoutedEventArgs) Handles lblResolution.Loaded
         lblResolution.Text = SystemParameters.PrimaryScreenWidth & "x" & SystemParameters.PrimaryScreenHeight & _
@@ -27,25 +24,92 @@ Class advhome
         cbKeyboardBlocker.SelectedIndex = 0
         cbAdvColor.SelectedIndex = 0
 
-        If My.Computer.Info.OSFullName.Contains("8") Then
-            cbAdvType.SelectedIndex = 1
+        If My.Computer.Info.OSFullName.Contains("8") Or My.Computer.Info.OSFullName.Contains("10") Then
+            cbAdvStyle.SelectedIndex = 1 'windows 8-10
         Else
-            cbAdvType.SelectedIndex = 0
+            cbAdvStyle.SelectedIndex = 0 'windows xp-7
         End If
 
         LoadSettings()
 
-        If isElevated = False Then
+        If rtechapp.isElevated = False Then
             cbKeyboardBlocker.SelectedIndex = 1
             cbKeyboardBlocker.IsEnabled = False
-            lblStatus.BBCode = "Ready. Not as admin."
+            lblStatus.BBCode = "Ready. [color=red]Not as admin.[/color]"
         End If
 
     End Sub
 
     Private Sub btnGo_Click(sender As Object, e As RoutedEventArgs) Handles btnGo.Click
         Try
-            Throw New NotImplementedException
+
+            If cbAdvStyle.SelectedIndex = -1 Then
+                MBox.ShowInfoOKBox("Style has not been selected.")
+            End If
+
+            If cbAdvColor.SelectedIndex = -1 Then
+                MBox.ShowInfoOKBox("Color has not been selected.")
+            End If
+
+            If cbKeyboardBlocker.SelectedIndex = -1 Then
+                MBox.ShowInfoOKBox("Keyboard Blocker has not been selected.")
+            End If
+
+            If Regex.IsMatch(tbAdvTime.Text, "^[0-9]+$") Then
+
+                If tbAdvTime.Text = 0 Then
+                    MBox.ShowInfoOKBox("Time can't be zero.")
+                ElseIf tbAdvTime.Text < 6 Then
+                    Dim result = ModernDialog.ShowMessage("Do you really want it to last that short?", "Info", MessageBoxButton.YesNo)
+                    If result = MessageBoxResult.Yes Then
+                        MakeBSOD()
+                    End If
+                ElseIf tbAdvTime.Text >= 120 Then
+                    Dim result = ModernDialog.ShowMessage("Do you really want it to last that long?", "Info", MessageBoxButton.YesNo)
+                    If result = MessageBoxResult.Yes Then
+                        MakeBSOD()
+                    End If
+                Else
+                    MakeBSOD()
+                End If
+
+            Else
+                MBox.ShowInfoOKBox("Time is not defined.")
+            End If
+
+        Catch ex As Exception
+            rtecherror.reportError(ex.Message(), ex.StackTrace())
+        End Try
+    End Sub
+
+    Private Sub MakeBSOD()
+        Try
+            SaveSettings()
+
+            rtechlog.logThis("INFO", "Starting to make BSOD in advanced mode.")
+
+            If cbKeyboardBlocker.SelectedIndex = 0 Then
+                Dim kb As New keyboardblocker
+                kb.Show()
+            End If
+
+            Dim ctime As New timer
+            ctime.Show()
+
+            Dim cscreens As New coverscreens
+            cscreens.Show()
+
+            If cbAdvStyle.SelectedIndex = 0 Then 'windows xp-7
+                Dim cbsod As New custombsod_xpw7
+                cbsod.Show()
+            ElseIf cbAdvStyle.SelectedIndex = 1 Then 'windows 8-10
+                Dim cbsod As New custombsod_w8w10
+                cbsod.Show()
+            Else
+                Throw New NotImplementedException
+            End If
+
+            rtechlog.logThis("INFO", "BSOD is showing.")
         Catch ex As Exception
             rtecherror.reportError(ex.Message(), ex.StackTrace())
         End Try
@@ -55,18 +119,18 @@ Class advhome
         Try
             Me.tbAdvTime.Text = CInt(rtechsettings.GetSetting("advtime"))
             Me.cbAdvColor.SelectedIndex = CInt(rtechsettings.GetSetting("advcolor"))
+            Me.cbAdvStyle.SelectedIndex = CInt(rtechsettings.GetSetting("advstyle"))
         Catch ex As Exception
             rtecherror.reportError(ex.Message(), ex.StackTrace())
         End Try
     End Sub
     Private Sub SaveSettings()
-        Dim errorcount As Integer = 0
         Try
             rtechsettings.SaveSetting("advtime", Convert.ToInt16(tbAdvTime.Text.ToString))
             rtechsettings.SaveSetting("advcolor", Convert.ToInt16(cbAdvColor.SelectedIndex.ToString))
+            rtechsettings.SaveSetting("advstyle", Convert.ToInt16(cbAdvStyle.SelectedIndex.ToString))
         Catch ex As Exception
             rtecherror.reportError(ex.Message(), ex.StackTrace())
-            errorcount = 1
         End Try
     End Sub
 End Class

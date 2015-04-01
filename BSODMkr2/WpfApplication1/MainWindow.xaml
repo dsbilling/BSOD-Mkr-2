@@ -4,7 +4,7 @@
   xmlns:mui="http://firstfloorsoftware.com/ModernUI"
   Title="BSOD Mkr 2.0" IsTitleVisible="True"
   Height="500" Width="700"
-  MinWidth="700" MinHeight="500"
+  MinWidth="700" MinHeight="505"
   WindowStartupLocation="CenterScreen"
   ContentSource="/Pages/main/introduction.xaml"
   Icon="/Content/bsodmkr_icon_128.ico">

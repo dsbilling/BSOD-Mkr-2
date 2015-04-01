@@ -18,7 +18,7 @@
             <Rectangle />
 
             <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
-                <mui:BBCodeBlock BBCode="[b]Type:[/b]"/>
+                <mui:BBCodeBlock BBCode="[b]Style:[/b]"/>
                 <ComboBox Name="cbBasicStyle" >
                     <ListBoxItem Content="Windows XP - 7"/>
                     <ListBoxItem Content="Windows 8 - 10"/>
@@ -27,7 +27,7 @@
                 <mui:BBCodeBlock BBCode=""/>
 
                 <mui:BBCodeBlock BBCode="[b]Color:[/b]"/>
-                <ComboBox Name="cbColor" >
+                <ComboBox Name="cbBasicColor" >
                     <ListBoxItem Content="Original BSOD Blue"/>
                     <ListBoxItem Content="Black"/>
                 </ComboBox>
