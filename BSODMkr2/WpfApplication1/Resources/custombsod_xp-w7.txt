@@ -3,7 +3,7 @@ to your computer.
 
 The problem seems to be caused by the following file: BSODMKR.EXE
 
-PAGE_FAULT_IT_NONPAGE_AREA
+BSODMKR_RUN_STATUS_FAILED
 
 If this is the first time you've seen this Stop error screen,
 restart your computer. If this screen appears again, follow

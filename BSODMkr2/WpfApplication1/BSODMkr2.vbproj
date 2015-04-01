@@ -266,6 +266,7 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">
@@ -305,7 +306,13 @@
     <Resource Include="Content\License.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\custombsod.txt" />
+    <None Include="Resources\custombsod_xp-w7.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\custombsod_w8-w10.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\custombsod_2000.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

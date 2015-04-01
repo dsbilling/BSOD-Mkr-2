@@ -66,7 +66,7 @@ Namespace My.Resources
         '''
         '''The problem seems to be caused by the following file: BSODMKR.EXE
         '''
-        '''PAGE_FAULT_IT_NONPAGE_AREA
+        '''BSODMKR_RUN_STATUS_FAILED
         '''
         '''If this is the first time you&apos;ve seen this Stop error screen,
         '''restart your computer. If this screen appears again, follow
@@ -74,7 +74,7 @@ Namespace My.Resources
         '''
         '''Check to make sure any new hardware or software is properly installed.
         '''If this is a new installation, ask your hardware or software manufacturer
-        '''for any windows updates you [rest of string was truncated]&quot;;.
+        '''for any windows updates you  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property custombsod() As String
             Get
