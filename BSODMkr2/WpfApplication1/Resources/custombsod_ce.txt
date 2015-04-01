@@ -1,0 +1,11 @@
+﻿A error has occurred and Winodws CE has been shut down to prevent damage to your
+computer.
+If you will try to restart your computer, press Ctrl+Alt+Delete.
+
+Technical information:
+
+*** STOP: 0x0004c2 (inaccessible embedded device)
+
+
+The computer will restart automatically
+after 30 seconds.

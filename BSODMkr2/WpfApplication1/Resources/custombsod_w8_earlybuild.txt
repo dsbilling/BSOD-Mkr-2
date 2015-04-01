@@ -1,0 +1,3 @@
+﻿Your computer needs to restart.
+It encountered a problem and will restart automatically.
+Error: 0x0000005C
