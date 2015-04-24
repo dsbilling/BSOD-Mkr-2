@@ -25,9 +25,9 @@ Class advhome
         cbAdvColor.SelectedIndex = 0
 
         If My.Computer.Info.OSFullName.Contains("8") Or My.Computer.Info.OSFullName.Contains("10") Then
-            cbAdvStyle.SelectedIndex = 1 'windows 8-10
+            cbAdvStyle.SelectedIndex = 2 'windows 8-10
         Else
-            cbAdvStyle.SelectedIndex = 0 'windows xp-7
+            cbAdvStyle.SelectedIndex = 1 'windows xp-7
         End If
 
         LoadSettings()
@@ -99,10 +99,13 @@ Class advhome
             Dim cscreens As New coverscreens
             cscreens.Show()
 
-            If cbAdvStyle.SelectedIndex = 0 Then 'windows xp-7
+            If cbAdvStyle.SelectedIndex = 0 Then 'windows 2000
+                Dim cbsod As New custombsod_2000
+                cbsod.Show()
+            ElseIf cbAdvStyle.SelectedIndex = 1 Then 'windows xp-7
                 Dim cbsod As New custombsod_xpw7
                 cbsod.Show()
-            ElseIf cbAdvStyle.SelectedIndex = 1 Then 'windows 8-10
+            ElseIf cbAdvStyle.SelectedIndex = 2 Then 'windows 8-10
                 Dim cbsod As New custombsod_w8w10
                 cbsod.Show()
             Else

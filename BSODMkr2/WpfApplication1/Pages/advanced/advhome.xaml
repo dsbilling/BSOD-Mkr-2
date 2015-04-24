@@ -21,6 +21,7 @@
                 <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
                     <mui:BBCodeBlock BBCode="[b]Style:[/b]"/>
                     <ComboBox Name="cbAdvStyle" >
+                        <ListBoxItem Content="Windows 2000"/>
                         <ListBoxItem Content="Windows XP - 7"/>
                         <ListBoxItem Content="Windows 8 - 10"/>
                     </ComboBox>

@@ -101,6 +101,12 @@
     <Compile Include="BSOD\Other\custombsod_w8w10.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BSOD\Other\custombsod_2000.Designer.vb">
+      <DependentUpon>custombsod_2000.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BSOD\Other\custombsod_2000.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BSOD\Other\keyboardblocker.Designer.vb">
       <DependentUpon>keyboardblocker.vb</DependentUpon>
     </Compile>
@@ -249,6 +255,9 @@
     </Compile>
     <EmbeddedResource Include="BSOD\Other\custombsod_w8w10.resx">
       <DependentUpon>custombsod_w8w10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSOD\Other\custombsod_2000.resx">
+      <DependentUpon>custombsod_2000.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BSOD\Other\keyboardblocker.resx">
       <DependentUpon>keyboardblocker.vb</DependentUpon>
