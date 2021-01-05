@@ -29,7 +29,7 @@
 
             <Grid Margin="0,75,0,0">
                 <StackPanel CanVerticallyScroll="True">
-                    <mui:BBCodeBlock BBCode="This application is licensed under [url=http://www.retardedtech.com/licenses]RTFL v1[/url]."/>
+                    <mui:BBCodeBlock BBCode="This application is licensed under [url=https://github.com/DanielRTRD/bsod-mkr-2/blob/main/LICENSE]GNU General Public License v3.0[/url]."/>
                     <mui:BBCodeBlock BBCode=""/>
                     <!-- CommandTarget="{Binding ElementName=Frame}" -->
                     <Button Content="Check for updates" Width="150" Name="btnC4U" HorizontalAlignment="Left" Margin="0,0,0,20" Command="NavigationCommands.GoToPage" CommandParameter="/Pages/Main/update.xaml" />
