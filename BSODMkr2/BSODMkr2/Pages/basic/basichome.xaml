@@ -1,0 +1,83 @@
+﻿<Page x:Class="basichome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+      mc:Ignorable="d" d:DesignWidth="300"
+      Title="basichome" Initialized="Page_Initialized">
+    <Grid>
+        <Rectangle Grid.RowSpan="2" />
+
+        <!-- content root for additional spacing -->
+        <Grid Margin="{StaticResource ContentMargin}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Rectangle />
+
+            <StackPanel MinWidth="200" MaxWidth="300" HorizontalAlignment="left">
+                <mui:BBCodeBlock BBCode="[b]Style:[/b]"/>
+                <ComboBox Name="cbBasicStyle" >
+                    <ListBoxItem Content="Windows XP - 7"/>
+                    <ListBoxItem Content="Windows 8 - 10"/>
+                </ComboBox>
+
+                <mui:BBCodeBlock BBCode=""/>
+
+                <mui:BBCodeBlock BBCode="[b]Color:[/b]"/>
+                <ComboBox Name="cbBasicColor" >
+                    <ListBoxItem Content="Original BSOD Blue"/>
+                    <ListBoxItem Content="Black"/>
+                </ComboBox>
+
+                <mui:BBCodeBlock BBCode=""/>
+
+                <StackPanel Orientation="Horizontal">
+                    <mui:BBCodeBlock BBCode="[b]Keyboard blocker:[/b]"/>
+                    <mui:BBCodeBlock BBCode="[url=https://github.com/DanielRTRD/bsod-mkr-2/wiki]?[/url]" Margin="5,0,0,0" />
+                </StackPanel>
+                <ComboBox Name="cbKeyboardBlocker" >
+                    <ListBoxItem Content="Enabled"/>
+                    <ListBoxItem Content="Disabled"/>
+                </ComboBox>
+
+                <mui:BBCodeBlock BBCode=""/>
+
+                <mui:BBCodeBlock BBCode="[b]Time in seconds:[/b]"/>
+                <TextBox Name="tbBasicTime" Text="30" />
+
+                <mui:BBCodeBlock BBCode=""/>
+
+                <mui:BBCodeBlock BBCode="[b]Resolution:[/b]"/>
+                <mui:BBCodeBlock Name="lblResolution" BBCode="0000x0000"/>
+
+                <mui:BBCodeBlock BBCode=""/>
+
+                <Button Name="btnGo" Content="Make The BSOD" />
+            </StackPanel>
+
+            <StackPanel MinWidth="350" Margin="225,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <mui:BBCodeBlock BBCode="[b]Status:[/b]" Name="lblStatusText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblStatus" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+            </StackPanel>
+
+            <!-- optional header -->
+            <Grid Margin="{StaticResource HeaderMargin}" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Rectangle />
+                <!-- <TextBlock Text="header" /> -->
+            </Grid>
+
+            <!-- optional status -->
+            <Grid Grid.Row="1" Margin="{StaticResource StatusMargin}" >
+                <Rectangle />
+                <!-- <TextBlock Text="status" />-->
+                <TextBlock Text="© 2014-2021, Daniel S. Billing" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

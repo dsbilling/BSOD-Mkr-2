@@ -1,0 +1,27 @@
+﻿							Windows Boot Error
+
+Windows Boot Manager has experienced a problem.
+
+
+	Status: 0xc000000f
+
+
+
+	Info: An error occurred transferring execution.
+
+
+
+You can try to recover the system with the Microsoft Windows System Recovery
+Tools. (You might need to restart the system manually.)
+
+If the problem continues, please contact your system administrator or computer
+manufacturer.
+
+
+
+
+
+
+
+
+SPACE=Continue

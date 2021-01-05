@@ -1,0 +1,15 @@
+﻿*** STOP: 0x0000007E (0xF641F84C,0xC0000034,0x00000000,0x00000000)
+BSODMKR_RUN_STATUS_FAILED
+
+If this is the first time you've seen this Stop error screen,
+restart your computer. If this screen appears again, follow
+these steps:
+
+Check for viruses on your computer. Remove any newly installed
+hard drives or hard drive controllers. Check your hard drive
+to make sure it is properly configured and terminated.
+Run CHKDSK /F to check for hard drivee corruption, and then
+restart your computer.
+
+Refer to your Getting Started manual for more information on
+troubleshooting Stop errors.

@@ -1,0 +1,72 @@
+﻿<Page x:Class="update"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="700"
+      Title="update">
+    <Grid>
+        <Rectangle Grid.RowSpan="2" />
+
+        <!-- content root for additional spacing -->
+        <Grid Margin="{StaticResource ContentMargin}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Rectangle />
+
+            <StackPanel MinWidth="350" MaxWidth="350" HorizontalAlignment="Left">
+                <TextBlock Text="Download Update" Style="{StaticResource Heading2}" />
+                <mui:BBCodeBlock BBCode="" Name="lblInfo" />
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <Button Name="btnDownload" Visibility="Hidden" Content="Download" MaxWidth="120" IsDefault="True" />
+                    <Button Name="btnCancel" Visibility="Hidden" Content="Cancel" MaxWidth="120" IsCancel="True" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel MinWidth="350" Margin="225,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <mui:BBCodeBlock BBCode="[b]Status:[/b]" Name="lblStatusText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblStatus" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <mui:BBCodeBlock BBCode="[b]File Size:[/b]" Name="lblFileSizeText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblFileSize" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <mui:BBCodeBlock BBCode="[b]Download Speed:[/b]" Name="lblSpeedText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblSpeed" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <mui:BBCodeBlock BBCode="[b]Time Left:[/b]" Name="lblTimeLeftText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblTimeLeft" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <mui:BBCodeBlock BBCode="[b]Elapsed Time:[/b]" Name="lblElapsedTimeText" Visibility="Hidden" />
+                    <mui:BBCodeBlock BBCode="N/A" Name="lblElapsedTime" Visibility="Hidden" Margin="5,0,0,0" />
+                </StackPanel>
+                <ProgressBar Name="pbLoading" Visibility="Hidden" Minimum="0" Maximum="1" Height="16" IsIndeterminate="True" Margin="0,10,0,0" Foreground="White" />
+                <ProgressBar Name="pbDownload" Visibility="Hidden" Minimum="0" Maximum="100" Value="70" Height="16" IsIndeterminate="False" Foreground="#FF1BA100" />
+                <!--<StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <ProgressBar Name="pbDownload" Visibility="Hidden" Minimum="0" Maximum="100" Value="70" Height="16" Width="175" IsIndeterminate="False" Foreground="#FF1BA100" />
+                    <ProgressBar Name="pbUnzip" Visibility="Hidden" Minimum="0" Maximum="100" Value="70" Height="16" Width="175" IsIndeterminate="False" />
+                </StackPanel>-->
+            </StackPanel>
+
+            <!-- optional header -->
+            <Grid Margin="{StaticResource HeaderMargin}" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Rectangle />
+                <!-- <TextBlock Text="header" /> -->
+            </Grid>
+
+            <!-- optional status -->
+            <Grid Grid.Row="1" Margin="{StaticResource StatusMargin}" >
+                <Rectangle />
+                <!--<TextBlock Text="status" Name="status" />-->
+                <TextBlock Text="© 2014-2021, Daniel S. Billing" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
