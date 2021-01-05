@@ -11,7 +11,7 @@ Public Class checkforupdate
 
             ElseIf My.Computer.Network.IsAvailable = True Then
 
-                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.com/products/bsodmkr/version.txt")
+                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
                 Dim newestversion As String = reader.ReadToEnd()
@@ -35,7 +35,7 @@ Public Class checkforupdate
                                         & "[b]Current:[/b] " & currentversion & vbNewLine & "[b]Newest:[/b] " & newestversion
                     Dim result = FirstFloor.ModernUI.Windows.Controls.ModernDialog.ShowMessage(msg, title, type)
                     If result = MessageBoxResult.Yes Then
-                        'Process.Start("http://www.bsodmkr.com/")
+                        Process.Start("https://github.com/DanielRTRD/bsod-mkr-2")
                     End If
 
                 End If
@@ -62,7 +62,7 @@ Public Class checkforupdate
 
                 C4Utext = "Please wait..."
 
-                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.com/products/bsodmkr/version.txt")
+                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
                 Dim newestversion As String = reader.ReadToEnd()
@@ -94,7 +94,7 @@ Public Class checkforupdate
 
             ElseIf My.Computer.Network.IsAvailable = True Then
 
-                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.com/products/bsodmkr/version.txt")
+                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
                 Dim newestversion As String = reader.ReadToEnd()
@@ -127,7 +127,7 @@ Public Class checkforupdate
 
             ElseIf My.Computer.Network.IsAvailable = True Then
 
-                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.com/products/bsodmkr/version.txt")
+                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
                 Dim newestversion As String = reader.ReadToEnd()

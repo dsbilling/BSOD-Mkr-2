@@ -38,7 +38,7 @@
 
                     <StackPanel Orientation="Horizontal">
                         <mui:BBCodeBlock BBCode="[b]Keyboard bocker:[/b]"/>
-                        <mui:BBCodeBlock BBCode="[url=http://docs.rtrdt.ch/display/BM/Basic+Home]?[/url]" Margin="5,0,0,0" />
+                        <mui:BBCodeBlock BBCode="[url=https://github.com/DanielRTRD/bsod-mkr-2/wiki]?[/url]" Margin="5,0,0,0" />
                     </StackPanel>
                     <ComboBox Name="cbKeyboardBlocker" >
                         <ListBoxItem Content="Enabled"/>

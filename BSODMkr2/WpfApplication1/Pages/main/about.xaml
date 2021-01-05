@@ -34,9 +34,9 @@
                     <!-- CommandTarget="{Binding ElementName=Frame}" -->
                     <Button Content="Check for updates" Width="150" Name="btnC4U" HorizontalAlignment="Left" Margin="0,0,0,20" Command="NavigationCommands.GoToPage" CommandParameter="/Pages/Main/update.xaml" />
                     <TextBlock Text="Links" Style="{StaticResource Heading2}" />
-                    <mui:BBCodeBlock BBCode="[url=http://bsodmkr.com/]Website[/url]"/>
-                    <mui:BBCodeBlock BBCode="[url=http://docs.rtrdt.ch/display/BM/Release+Notes]Changelog[/url]"/>
-                    <mui:BBCodeBlock BBCode="[url=http://jira.rtrdt.ch/browse/BM]Issues and Bugs[/url]"/>
+                    <mui:BBCodeBlock BBCode="[url=https://github.com/DanielRTRD/bsod-mkr-2]Website[/url]"/>
+                    <mui:BBCodeBlock BBCode="[url=https://github.com/DanielRTRD/bsod-mkr-2/releases]Changelog[/url]"/>
+                    <mui:BBCodeBlock BBCode="[url=https://github.com/DanielRTRD/bsod-mkr-2/issues]Issues and Bugs[/url]"/>
                     <mui:BBCodeBlock BBCode=""/>
                     <Button Content="DEBUG: Throw New Unknown Exeption" Margin="0,0,0,8" Name="btnExeption"/>
                     <Button Content="DEBUG: Throw New Known Exeption" Margin="0,0,0,8" Name="btnKnownExeption"/>
