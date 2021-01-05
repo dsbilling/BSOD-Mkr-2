@@ -65,7 +65,7 @@
             <Grid Grid.Row="1" Margin="{StaticResource StatusMargin}" >
                 <Rectangle />
                 <!--<TextBlock Text="status" Name="status" />-->
-                <TextBlock Text="© 2015, Retarded Tech" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
+                <TextBlock Text="© 2014-2021, Daniel S. Billing" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
             </Grid>
         </Grid>
     </Grid>

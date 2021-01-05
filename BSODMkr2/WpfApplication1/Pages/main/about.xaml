@@ -22,7 +22,7 @@
                 <StackPanel MinWidth="200" Grid.Column="2" Margin="75,0,0,0">
                     <TextBlock Text="BSOD Mkr" Style="{StaticResource Heading2}" />
                     <TextBlock Text="0.0.0 Build 0000" Name="lblAboutVersion"/>
-                    <TextBlock Text="© 2009-2015, Retarded Tech" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" FontSize="11" Margin="0,5,0,0"/>
+                    <TextBlock Text="© 2009-2021, Daniel S. Billing" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" FontSize="11" Margin="0,5,0,0"/>
                     <TextBlock Text=""/>
                 </StackPanel>
             </Grid>
@@ -53,7 +53,7 @@
             <Grid Grid.Row="1" Margin="{StaticResource StatusMargin}" >
                 <Rectangle />
                 <!-- <TextBlock Text="status" />-->
-                <TextBlock Text="© 2015, Retarded Tech" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
+                <TextBlock Text="© 2014-2021, Daniel S. Billing" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" TextAlignment="Right" />
             </Grid>
         </Grid>
     </Grid>

@@ -12,10 +12,10 @@ Imports System.Windows
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("BSOD Mkr 2.0")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Retarded Tech")> 
-<Assembly: AssemblyProduct("BSOD Mkr 2.0")> 
-<Assembly: AssemblyCopyright("© 2014, Retarded Tech")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Infihex")>
+<Assembly: AssemblyProduct("BSOD Mkr 2.0")>
+<Assembly: AssemblyCopyright("© 2014-2021, Daniel S. Billing")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 
