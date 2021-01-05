@@ -30,13 +30,12 @@
                     <TextBlock Text=""/>
                     <TextBlock Text="In advanced mode it is possible to edit the BSOD error codes and save the new files to disk, in order to later apply them." TextWrapping="WrapWithOverflow" />
                     <TextBlock Text=""/>
-                    <TextBlock Text="Reviews" Style="{StaticResource Heading2}" />
-                    <TextBlock Text="'The app is low-demanding when it comes to CPU and RAM, so it does not affect the overall performance of the PC. It executes commands rapidly and works well, without actually causing Windows to hang, crash or pop up the real Blue Screen of Death. We have not come across any issues in our tests. All in all, BSOD Mkr serves its purpose and can be used by anyone.'" TextWrapping="WrapWithOverflow" />
-                    <TextBlock Text="- Softpedia (17th Feb 2014) 4/5 Stars" TextWrapping="WrapWithOverflow" />
                     <TextBlock Text=""/>
                     <TextBlock Text="History" Style="{StaticResource Heading2}" />
                     <TextBlock Text="BSOD Mkr was started back in autumn of 2009 when Daniel and his friend, Andreas, was talking about how fun it would be to see our brothers faces when their computer got a BSOD. The development was great in the beginning but after a short while it wasn't updated for a year. So in November of 2010 it was updated to 1.0. A year later, in September of 2011, then it was updated again and it was held updated thru 2012. Then in 2014 Daniel started development of v2.0, this application, and the development stopped in April of 2015. Now over five years later Daniel decided to publish this for the world to see." TextWrapping="WrapWithOverflow" />
-                    
+                    <TextBlock Text="Reviews" Style="{StaticResource Heading2}" />
+                    <TextBlock Text="'The app is low-demanding when it comes to CPU and RAM, so it does not affect the overall performance of the PC. It executes commands rapidly and works well, without actually causing Windows to hang, crash or pop up the real Blue Screen of Death. We have not come across any issues in our tests. All in all, BSOD Mkr serves its purpose and can be used by anyone.'" TextWrapping="WrapWithOverflow" />
+                    <TextBlock Text="- Softpedia (17th Feb 2014) 4/5 Stars" TextWrapping="WrapWithOverflow" />
                 </StackPanel>
             </ScrollViewer>
 
