@@ -65,7 +65,8 @@ Public Class checkforupdate
                 Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
-                Dim newestversion As String = reader.ReadToEnd()
+                Dim newestversion As String = Trim(reader.ReadLine())
+                'MBox.ShowInfoOKBox("-" & newestversion & "-")
                 Dim currentversion As String = My.Application.Info.Version.ToString
 
                 If newestversion <= currentversion Then

@@ -25,27 +25,27 @@ Class update
 
             ElseIf My.Computer.Network.IsAvailable = True Then
 
-                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.no/products/bsodmkr/version.txt")
+                Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
                 Dim response As System.Net.HttpWebResponse = request.GetResponse()
                 Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
-                Dim serverfile As String = reader.ReadToEnd()
+                Dim serverfile As String = Trim(reader.ReadLine())
 
-                Dim serverarray() As String = serverfile.Split("|")
+                'Dim serverarray() As String = serverfile.Split("|")
 
-                Dim serverversion As String = serverarray(0)
-                Dim serverdate As String = serverarray(1)
-                Dim serverlink As String = serverarray(2)
+                'Dim serverversion As String = serverarray(0)
+                'Dim serverdate As String = serverarray(1)
+                'Dim serverlink As String = serverarray(2)
 
-                Dim newestversion As String = serverversion
+                Dim newestversion As String = serverfile
                 Dim currentversion As String = My.Application.Info.Version.ToString
 
                 If newestversion <= currentversion Then
                     lblInfo.BBCode = vbNewLine & "[b]You have the newest version![/b]"
                     rtechlog.logThis("INFO", "Application is up-to-date.")
                 ElseIf newestversion > currentversion Then
-                    lblInfo.BBCode = vbNewLine & "[color=orange][b]Old version detected.[/b][/color] [url=http://docs.rtrdt.ch/display/BM/Release+Notes]What's new?[/url]" & vbNewLine & vbNewLine _
-                                   & "[b]Current:[/b] " & currentversion & vbNewLine & "[b]Newest:[/b] " & newestversion & " (" & serverdate & ")"
-                    rtechlog.logThis("INFO", "Update for application has been found. New: " & newestversion & " (" & serverdate & ") -  Old: " & currentversion)
+                    lblInfo.BBCode = vbNewLine & "[color=orange][b]Old version detected.[/b][/color] [url=https://github.com/DanielRTRD/bsod-mkr-2/releases]What's new?[/url]" & vbNewLine & vbNewLine _
+                                   & "[b]Current:[/b] " & currentversion & vbNewLine & "[b]Newest:[/b] " & newestversion ' & " (" & serverdate & ")"
+                    rtechlog.logThis("INFO", "Update for application has been found. New: " & newestversion & " -  Old: " & currentversion)
                 End If
 
             End If
@@ -56,64 +56,65 @@ Class update
     End Sub
 
     Private Sub btnDownload_Click(sender As Object, e As RoutedEventArgs) Handles btnDownload.Click
+        Process.Start("https://github.com/DanielRTRD/bsod-mkr-2/releases")
 
-        btnDownload.IsEnabled = False
-        btnCancel.Visibility = Windows.Visibility.Visible
-        btnCancel.IsEnabled = True
-        pbLoading.Visibility = Windows.Visibility.Visible
-        pbDownload.Visibility = Windows.Visibility.Visible
-        lblStatusText.Visibility = Windows.Visibility.Visible
-        lblStatus.Visibility = Windows.Visibility.Visible
-        lblStatus.BBCode = "Connecting..."
-        rtechlog.logThis("INFO", "Update: Connecting to server for download...")
+        'btnDownload.IsEnabled = False
+        'btnCancel.Visibility = Windows.Visibility.Visible
+        'btnCancel.IsEnabled = True
+        'pbLoading.Visibility = Windows.Visibility.Visible
+        'pbDownload.Visibility = Windows.Visibility.Visible
+        'lblStatusText.Visibility = Windows.Visibility.Visible
+        'lblStatus.Visibility = Windows.Visibility.Visible
+        'lblStatus.BBCode = "Connecting..."
+        'rtechlog.logThis("INFO", "Update: Connecting to server for download...")
 
-        lblTimeLeftText.Visibility = Windows.Visibility.Visible
-        lblTimeLeft.Visibility = Windows.Visibility.Visible
-        lblFileSizeText.Visibility = Windows.Visibility.Visible
-        lblFileSize.Visibility = Windows.Visibility.Visible
-        lblSpeedText.Visibility = Windows.Visibility.Visible
-        lblSpeed.Visibility = Windows.Visibility.Visible
+        'lblTimeLeftText.Visibility = Windows.Visibility.Visible
+        'lblTimeLeft.Visibility = Windows.Visibility.Visible
+        'lblFileSizeText.Visibility = Windows.Visibility.Visible
+        'lblFileSize.Visibility = Windows.Visibility.Visible
+        'lblSpeedText.Visibility = Windows.Visibility.Visible
+        'lblSpeed.Visibility = Windows.Visibility.Visible
 
-        lblElapsedTimeText.Visibility = Windows.Visibility.Visible
-        lblElapsedTime.Visibility = Windows.Visibility.Visible
+        'lblElapsedTimeText.Visibility = Windows.Visibility.Visible
+        'lblElapsedTime.Visibility = Windows.Visibility.Visible
 
-        pbDownload.Value = 0
-        sw.Reset() 'Reset elapsed time
-        lblElapsedTime.BBCode = "N/A"
+        'pbDownload.Value = 0
+        'sw.Reset() 'Reset elapsed time
+        'lblElapsedTime.BBCode = "N/A"
 
-        rtechlog.logThis("INFO", "Update: Checking files and folders.")
-        Try
-            If System.IO.Directory.Exists(rtechapp.filesFolderPath) = False Then
-                System.IO.Directory.CreateDirectory(rtechapp.filesFolderPath)
-            End If
-        Catch ex As Exception
-            rtecherror.reportError(ex.Message, ex.ToString)
-        End Try
+        'rtechlog.logThis("INFO", "Update: Checking files and folders.")
+        'Try
+        '    If System.IO.Directory.Exists(rtechapp.filesFolderPath) = False Then
+        '        System.IO.Directory.CreateDirectory(rtechapp.filesFolderPath)
+        '    End If
+        'Catch ex As Exception
+        '    rtecherror.reportError(ex.Message, ex.ToString)
+        'End Try
 
-        Try
-            If System.IO.Directory.Exists(rtechapp.logsFilePath) = False Then
-                System.IO.Directory.CreateDirectory(rtechapp.logsFilePath)
-            End If
-        Catch ex As Exception
-            rtecherror.reportError(ex.Message, ex.ToString)
-        End Try
+        'Try
+        '    If System.IO.Directory.Exists(rtechapp.logsFilePath) = False Then
+        '        System.IO.Directory.CreateDirectory(rtechapp.logsFilePath)
+        '    End If
+        'Catch ex As Exception
+        '    rtecherror.reportError(ex.Message, ex.ToString)
+        'End Try
 
-        rtechlog.logThis("INFO", "Update: Getting info from server.")
+        'rtechlog.logThis("INFO", "Update: Getting info from server.")
 
-        Try
-            Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("http://retardedtech.no/products/bsodmkr/version.txt")
-            Dim response As System.Net.HttpWebResponse = request.GetResponse()
-            Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
-            Dim serverfile As String = reader.ReadToEnd()
-            Dim serverarray() As String = serverfile.Split("|")
-            Dim serverlink As String = serverarray(2)
+        'Try
+        '    Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DanielRTRD/bsod-mkr-2/main/version.txt")
+        '    Dim response As System.Net.HttpWebResponse = request.GetResponse()
+        '    Dim reader As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
+        '    Dim serverfile As String = reader.ReadToEnd()
+        '    Dim serverarray() As String = serverfile.Split("|")
+        '    Dim serverlink As String = serverarray(2)
 
-            'MsgBox(serverlink)
-            downloadUpdate(serverlink)
+        '    'MsgBox(serverlink)
+        '    downloadUpdate(serverlink)
 
-        Catch ex As Exception
-            rtecherror.reportError(ex.Message, ex.ToString)
-        End Try
+        'Catch ex As Exception
+        '    rtecherror.reportError(ex.Message, ex.ToString)
+        'End Try
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As RoutedEventArgs) Handles btnCancel.Click
