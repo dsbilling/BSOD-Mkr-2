@@ -15,4 +15,4 @@ BSOD Mkr was started back in autumn of 2009 when Daniel and his friend, Andreas,
 
 Q: Where is v1.0?
 
-A: This will be published at a later point.
+A: This will be published at a later point. But fractions of it can be found [here](https://github.com/DanielRTRD/BSOD-Mkr).
